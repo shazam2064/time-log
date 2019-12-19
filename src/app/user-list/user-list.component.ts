@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { User } from './user.model';
-import { UserListService } from './user-list.service';
+import { Ingredient } from '../shared/user.model';
+import { ShoppingListService } from './user-list.service';
 
 @Component({
   selector: 'app-user-list',
@@ -10,14 +10,14 @@ import { UserListService } from './user-list.service';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit, OnDestroy {
-  users: User[];
+  users: Users[];
   private subscription: Subscription;
 
   constructor(private usService: UserListService) { }
 
   ngOnInit() {
     this.users = this.usService.getUsers();
-    this.subscription = this.usService.usersChanged
+    this.subscription = this.usService.ingredientsChanged
       .subscribe(
         (ingredients: User[]) => {
           this.users = ingredients;
