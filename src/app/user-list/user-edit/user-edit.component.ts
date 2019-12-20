@@ -7,7 +7,7 @@ import {
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
-import { User } from '../../user-list/user.model';
+import { User } from '../user.model';
 import { UserListService } from '../user-list.service';
 
 @Component({
