@@ -19,8 +19,8 @@ export class UserListComponent implements OnInit, OnDestroy {
     this.users = this.usService.getUsers();
     this.subscription = this.usService.usersChanged
       .subscribe(
-        (ingredients: User[]) => {
-          this.users = ingredients;
+        (users: User[]) => {
+          this.users = users;
         }
       );
   }

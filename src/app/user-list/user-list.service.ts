@@ -1,4 +1,4 @@
-import { User } from '../user-list/user.model';
+import { User } from './user.model';
 import { Subject } from 'rxjs';
 
 export class UserListService {
@@ -17,8 +17,8 @@ export class UserListService {
     return this.users[index];
   }
 
-  addUser(ingredient: User) {
-    this.users.push(ingredient);
+  addUser(user: User) {
+    this.users.push(user);
     this.usersChanged.next(this.users.slice());
   }
 
