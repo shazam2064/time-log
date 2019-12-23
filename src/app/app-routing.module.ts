@@ -11,9 +11,9 @@ import { ProjectsResolverService } from './project/project-resolver.service';
 import { AuthGuard } from './auth/auth.guard';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/project', pathMatch: 'full' },
+  { path: '', redirectTo: '/projects', pathMatch: 'full' },
   {
-    path: 'project',
+    path: 'projects',
     component: ProjectComponent,
     canActivate: [AuthGuard],
     children: [

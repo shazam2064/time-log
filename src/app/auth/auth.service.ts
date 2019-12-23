@@ -49,7 +49,7 @@ export class AuthService {
   login(email: string, password: string) {
     return this.http
       .post<AuthResponseData>(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAst_E9Npz-uaUCUkw3IG1YAwTOHEW4xms',
+        'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyAst_E9Npz-uaUCUkw3IG1YAwTOHEW4xms',
         {
           email: email,
           password: password,
